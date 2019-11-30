@@ -29,9 +29,9 @@ def send_sms(Tempsensor):
     client = Client(account_sid,auth_token)
     temperatures = convertTempsensorData(Tempsensor)
     
-    message = "The Temperature at emmy’s main office in Berlin is currently {}°C".format(temperatures[0])
+    message = "The Temperature at loading station in Berlin is currently {}°C".format(temperatures[0])
     
-    message = client.messages.create(to = "+4917645904118", from_= "+12057079430",body = message)
+    message = client.messages.create(to = "(string_of your number)", from_= "(string of number you want a message too)",body = message)
     
     print(message.sid)
     print("Message sent")
